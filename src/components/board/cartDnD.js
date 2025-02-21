@@ -4,8 +4,8 @@ const onMouseOver = (e) => {
   console.log(e);
   console.log('onMouseOver');
 
-  actualCart.style.top = e.clientY + 'px';
-  actualCart.style.left = e.clientX + 'px';
+  actualCart.style.top = `${e.clientY}px`;
+  actualCart.style.left = `${e.clientX}px`;
 };
 
 const onMouseUp = () => {
@@ -17,8 +17,7 @@ const onMouseUp = () => {
   document.documentElement.removeEventListener('mouseover', onMouseOver);
 };
 
-
-function mousedown(e) {  // console.log('cartDnD');
+function mousedown(e) { // console.log('cartDnD');
   e.preventDefault();
 
   const carts = document.querySelectorAll('.cart');
@@ -31,13 +30,13 @@ function mousedown(e) {  // console.log('cartDnD');
     console.log(`здесь cart есть, всего - ${carts.length}`);
     actualCart = e.target;
   } else if (e.target.parentElement.classList.contains('cart')) {
-// console.log(`У родителя cart-очки есть, всего - ${carts.length}`);
+    // console.log(`У родителя cart-очки есть, всего - ${carts.length}`);
     actualCart = e.target.parentElement;
   } else { // console.log('Класса cart нет');
     actualCart = undefined;
     return;
   } //
-//   console.log(actualCart);
+  //   console.log(actualCart);
 
   // if (e.target.classList.con)
   // actualCart = e.target;

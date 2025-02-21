@@ -69,13 +69,10 @@ function formClickAdd(e) {
     }
   }
 
-
   cart.addEventListener('mousedown', mousedown);
 
   cart.addEventListener('mouseover', cartMouseover); // появление кнопки - X
   cart.addEventListener('mouseout', cartMouseout); // пропадание кнопки - X
-
-  
 
   block.appendChild(cart);
 }
